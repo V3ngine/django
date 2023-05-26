@@ -14,7 +14,7 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         print(options['num'])
 
-        with open('../mini/data_items.json','r', encoding='utf8')as file:
+        with open('data_items.json','r', encoding='utf8')as file:
             file = file.read()
             json_data =  json.loads(file)
 

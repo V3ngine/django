@@ -30,7 +30,7 @@ class Edition(models.Model):
     name = models.CharField(max_length=255, verbose_name='Название')
     slug = AutoSlugField(max_length=255, unique=True, db_index=True, verbose_name='URL', editable=True)
     description = models.TextField(blank=True, verbose_name='Содержание')
-    photo = models.ImageField(upload_to='max/static/max/edition', null=True, blank=True, verbose_name='Фото')
+    photo = models.ImageField(upload_to='edition', null=True, blank=True, verbose_name='Фото')
     pub_date = models.DateTimeField(default=datetime.now, verbose_name='Время создания')
     is_published = models.BooleanField(default=True, verbose_name='Публикация')
     relation = models.ForeignKey('Category', on_delete= models.CASCADE, null=True, verbose_name='Категории')

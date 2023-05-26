@@ -11,8 +11,13 @@ class EditionAdmin(admin.ModelAdmin):
     list_filter = ('name',)
     list_editable = ('is_published',)
     fields = ('name','photo')
+    readonly_fields = ('get_img',)
     # prepopulated_fields = {'slug':('name',)}
     empty_value_display = '--empty--'
+
+    
+    def get_img(self,obj):
+        return mark_safe(f'<img src={obj.img.url} width="50" height="60">')
 
 
 class CategoryAdmin(admin.ModelAdmin):
