@@ -1,0 +1,1 @@
+[{"model": "max.category", "pk": 1, "fields": {"name": "action", "img": "category/action-877998502-2048x2048.jpg", "slug": "action"}}, {"model": "max.category", "pk": 2, "fields": {"name": "historical", "img": "category/old-books.jpg", "slug": "historical"}}, {"model": "max.category", "pk": 3, "fields": {"name": "detecteve", "img": "category/detective.jpg", "slug": "detecteve"}}]
